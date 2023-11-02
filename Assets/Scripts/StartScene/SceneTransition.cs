@@ -9,4 +9,9 @@ public class SceneTransition : MonoBehaviour
     {
         SceneManager.LoadScene("LevelOne");
     }
+
+    public void LoadStartScene()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
 }
