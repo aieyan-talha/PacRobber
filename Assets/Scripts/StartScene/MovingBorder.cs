@@ -65,7 +65,6 @@ public class MovingBorder : MonoBehaviour
 
     private void MoveToNextPos()
     {
-        Debug.Log("CURRENT INDEX : " + currentIndex);
         //If currentIndex is greater than array length, reset currentIndex to 0
         if (currentIndex < borderPositions.Length - 1)
         {
@@ -77,6 +76,7 @@ public class MovingBorder : MonoBehaviour
 
             if (Vector3.Distance(transform.position, endPoint.position) < 0.01f)
             {
+                transform.Rotate(0.0f, 0.0f, borderPositions[currentIndex + 1].zAngle);
                 currentIndex++;
             }
         } else if (currentIndex == borderPositions.Length - 1)
@@ -88,6 +88,7 @@ public class MovingBorder : MonoBehaviour
             if (Vector3.Distance(transform.position, endPoint.position) < 0.01f)
             {
                 currentIndex = 0;
+                transform.Rotate(0.0f, 0.0f, 0.0f);
             }
         }
     }
