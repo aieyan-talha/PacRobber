@@ -13,6 +13,7 @@ TagManager:
   - TimerValue
   - GhostTimerLabel
   - GhostTimerValue
+  - GhostLife
   layers:
   - Default
   - TransparentFX
